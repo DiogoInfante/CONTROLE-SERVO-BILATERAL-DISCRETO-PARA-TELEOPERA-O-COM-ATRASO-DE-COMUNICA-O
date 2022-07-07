@@ -1,0 +1,14 @@
+function plotErro(X_m, Erro_1, Erro_2, Erro_3, Erro_4, X_5, estado, t)
+
+figure;
+hold on
+plot(t,rad2deg(Erro(:,1)));
+plot(t,rad2deg(Erro(:,3)));
+plot(t,rad2deg(Erro(:,2)));
+plot(t,rad2deg(Erro(:,4)));
+grid on; xlabel('Tempo [s]'); legend('Mestre','Simulação 1', 'Simulação 2', 'Simulação 3', 'Simulação 4', 'Simulação 5','linewidth',2);
+title(['Diferença entre os Estados do Mestre e Escravo']);
+xlim([0 t(end)])
+hold off
+
+end
